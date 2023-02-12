@@ -127,7 +127,7 @@ export default function Hero(){
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                        <div className="relative w-auto my-6 mx-auto max-w-4xl">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
@@ -153,22 +153,21 @@ export default function Hero(){
                                       {/*<span className={"font-bold text-xl text-black flex justify-center items-center"}>Welcome to AccessAI, a cutting-edge SMS messaging app powered by artificial intelligence. </span>*/}
                                       <div><span className={"text-xl"}>By using our app, you agree to be bound by the following terms and conditions (the "Terms"). If you do not agree to these Terms, please do not use our app.</span></div>
 <br/>
-                                      <div className={"flex justify-start"}><span className={'font-bold text-black text-xl '}>Use of AccessAI</span></div>
+                                      <div className={"flex justify-start"}><span className={'font-bold text-black  '}>Use of AccessAI</span></div>
 AccessAI grants you a limited, non-exclusive, non-transferable license to use our app for personal, non-commercial purposes in accordance with these Terms. You may not use our app for any illegal or unauthorized purpose.
 
 
-                                                                            <span className={'font-bold text-black text-xl'}>Third Party Services</span>
-                                      <div>AccessAI uses third-party services, such as <span className={"text-red-700 font-bold text-lg"}>Twilio</span>, <span className={"text-black font-bold text-lg"}>Co:here</span>, and OpenAI, to provide certain features and functionality of our app. By using these services, you agree to be bound by the terms and conditions of these third-party services.</div>
-                                                                            <span className={'font-bold text-black text-xl'}>Disclaimers</span>
+                                                                            <span className={'font-bold text-black '}>Third Party Services</span>
+                                      <div>AccessAI uses third-party services, such as <span className={"text-red-700 font-bold text-lg"}>Twilio</span>, <span className={"text-gray-700 font-bold text-lg"}>Co:here</span>, and OpenAI, to provide certain features and functionality of our app. By using these services, you agree to be bound by the terms and conditions of these third-party services.</div>
+                                                                            <span className={'font-bold text-black '}>Disclaimers</span>
 AccessAI provides the app on an "as is" and "as available" basis, and makes no warranties, express or implied, as to the operation of our app or the information, content, materials, or products included on or accessible through our app. AccessAI does not guarantee that our app will be uninterrupted or error-free, and will not be liable for any interruption or errors.
-                                                                            <span className={'font-bold text-black text-xl'}>Limitation of Liability</span>
+                                                                            <span className={'font-bold text-black '}>Limitation of Liability</span>
 
 AccessAI shall not be liable for any damages arising out of or in connection with your use of our app, including but not limited to indirect, incidental, special, or consequential damages.
 
                                       <br/>
-                                      <br/>
 
-                                                                            <span className={'font-bold text-black text-xl'}>Changes to These Terms</span>
+                                                                            <span className={'font-bold text-black '}>Changes to These Terms</span>
 
 AccessAI reserves the right to modify these Terms at any time. Your continued use of our app after any changes to these Terms indicates your acceptance of the revised Terms.
                                       <br/>
@@ -188,7 +187,7 @@ AccessAI reserves the right to modify these Terms at any time. Your continued us
                                     <a
                                         className="bg-green-600 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"
-                                        href={"sms:5813336969?&body=Why is the sky blue?"}
+                                        href={"sms:+14509906969?&body=Why is the sky blue?"}
                                     >
                                         Message
                                     </a>
