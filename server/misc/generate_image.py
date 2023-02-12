@@ -1,0 +1,20 @@
+import os
+import requests
+import dotenv
+
+dotenv.load_dotenv()
+
+print("HIFEHWAIO".lower())
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + os.getenv('OPENAI_API_KEY'),
+}
+
+json_data = {
+    'prompt': 'show me a photo of a happy corgi puppy sitting and facing forward, studio light, longshot',
+    'n': 1,
+    'size': '1024x1024',
+}
+
+response = requests.post('https://api.openai.com/v1/images/generations', headers=headers, json=json_data)
+print(response.json()['data'][0]['url'])
