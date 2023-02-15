@@ -19,31 +19,33 @@ def lambda_handler(event, context):
             body = pair.split("=")[1].replace("+", " ")
             print(body)
             if ("show me" in body.lower()):
-                headers = {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + os.getenv('OPENAI_API_KEY'),
-                }
+                try:
+                    r = requests.post(
+                        "https://api.deepai.org/api/text2img",
+                        data={
+                            'text': body,
+                            'grid_size': 1
+                        },
+                        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+                    )
+                    image_url = r.json()['output_url']
+                    response = f"<Response><Message><Media>{image_url}</Media></Message></Response>"
 
-                json_data = {
-                    'prompt': body,
-                    'n': 1,
-                    'size': '1024x1024',
-                }
+                    print(response)
+                    return {
+                        'statusCode': 200,
+                        'headers': {'Content-Type': 'text/xml'},
+                        'body': response
+                    }
+                except:
+                    response = f"<Response><Message>Daily Limit Reached for image generations</Message></Response>"
 
-                response = requests.post('https://api.openai.com/v1/images/generations', headers=headers,
-                                         json=json_data)
-                print(response.json()['data'][0]['url'])
-                image_url = (response.json()['data'][0]['url']).replace('&', "&amp;")
-
-                response = f"<Response><Message><Media>{image_url}</Media></Message></Response>"
-                # response = f"<Response><Message><Media>{image_url}</Media></Message></Response>"
-                print(response)
-                return {
-                    'statusCode': 200,
-                    'headers': {'Content-Type': 'text/xml'},
-                    'body': response
-                }
-
+                    print(response)
+                    return {
+                        'statusCode': 200,
+                        'headers': {'Content-Type': 'text/xml'},
+                        'body': response
+                    }
 
 
             else:
